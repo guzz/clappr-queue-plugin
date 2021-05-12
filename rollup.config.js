@@ -22,19 +22,19 @@ const plugins = [
 
 const mainBundle = {
   input: 'src/queue.js',
-  external: ['@clappr/core'],
+  external: ['@guzzj/clappr-core'],
   output: [
     {
       name: 'QueuePlugin',
       file: pkg.main,
       format: 'umd',
-      globals: { '@clappr/core': 'Clappr' },
+      globals: { '@guzzj/clappr-core': 'Clappr' },
     },
     !!process.env.MINIMIZE && {
       name: 'QueuePlugin',
       file: 'dist/clappr-queue-plugin.min.js',
       format: 'umd',
-      globals: { '@clappr/core': 'Clappr' },
+      globals: { '@guzzj/clappr-core': 'Clappr' },
       plugins: terser(),
     },
   ],
@@ -43,12 +43,12 @@ const mainBundle = {
 
 const esmBundle = {
   input: 'src/queue.js',
-  external: ['@clappr/core', /@babel\/runtime/],
+  external: ['@guzzj/clappr-core', /@babel\/runtime/],
   output: {
     name: 'QueuePlugin',
     file: pkg.module,
     format: 'esm',
-    globals: { '@clappr/core': 'Clappr' },
+    globals: { '@guzzj/clappr-core': 'Clappr' },
   },
   plugins: [
     babelPluginForESMBundle({

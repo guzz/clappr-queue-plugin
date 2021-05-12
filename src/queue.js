@@ -1,4 +1,4 @@
-import { CorePlugin, Events, version } from '@clappr/core'
+import { CorePlugin, Events, version } from '@guzzj/clappr-core'
 
 export default class QueuePlugin extends CorePlugin {
   get name() { return 'queue' }

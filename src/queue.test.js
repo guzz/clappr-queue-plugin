@@ -1,4 +1,4 @@
-import { Events, Core, Container, Playback, version } from '@clappr/core'
+import { Events, Core, Container, Playback, version } from '@guzzj/clappr-core'
 import QueuePlugin from './queue'
 
 const videoURLExample1 = 'http://cool-webpage/path/first-cool-video.mp4'
